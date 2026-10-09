@@ -1,6 +1,3 @@
-CREATE DATABASE CollegeDB;
-USE CollegeDB;
-
 CREATE TABLE Course (
     CourseID INT PRIMARY KEY,
     CourseName VARCHAR(100),
@@ -30,8 +27,7 @@ SELECT Course.CourseID,
        Enrollment.StudentID
 FROM Course
 LEFT JOIN Enrollment
-ON Course.CourseID = Enrollment.CourseID
-ORDER BY Course.CourseID, Enrollment.EnrollmentID;
+ON Course.CourseID = Enrollment.CourseID;
 
 SELECT Course.CourseID,
        Course.CourseName,
@@ -39,5 +35,4 @@ SELECT Course.CourseID,
        Enrollment.StudentID
 FROM Course
 RIGHT JOIN Enrollment
-ON Course.CourseID = Enrollment.CourseID
-ORDER BY Enrollment.EnrollmentID;
+ON Course.CourseID = Enrollment.CourseID;
