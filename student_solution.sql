@@ -4,7 +4,7 @@ CREATE TABLE Course (
     Credits INT
 );
 
-INSERT INTO Course (CourseID, CourseName, Credits) VALUES
+INSERT INTO Course VALUES
 (201, 'Database Systems', 4),
 (202, 'Data Structures', 3),
 (203, 'Mathematics', 4);
@@ -15,7 +15,7 @@ CREATE TABLE Enrollment (
     CourseID INT
 );
 
-INSERT INTO Enrollment (EnrollmentID, StudentID, CourseID) VALUES
+INSERT INTO Enrollment VALUES
 (1, 1001, 201),
 (2, 1001, 202),
 (3, 1002, 203),
